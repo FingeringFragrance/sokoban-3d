@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cargo check *)",
+      "Bash(cargo test *)",
+      "Bash(python -c ' *)"
+    ],
+    "additionalDirectories": [
+      "d:\\work\\sokoban\\sokoban-3d\\sokoban-editor\\src"
+    ]
+  }
+}

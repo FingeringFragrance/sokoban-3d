@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git stash *)",
+      "Bash(cat)",
+      "Bash(cp sokoban-game/Cargo.toml sokoban-game/Cargo.toml.orig)",
+      "Bash(cargo build *)",
+      "Bash(cargo clean *)",
+      "Bash(taskkill -f -im sokoban-game.exe)",
+      "Bash(sed -i 's/title_text\\(translate\\(\"menu.title\", lang\\), FS_TITLE\\)/title_text\\(translate\\(\"menu.title\", lang\\), FS_TITLE, font\\)/g' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/title_text\\(translate\\(\"menu.title\", lang\\), FS_HEADER\\)/title_text\\(translate\\(\"menu.title\", lang\\), FS_HEADER, font\\)/g' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/title_text\\(translate\\(\"menu.select_level\", lang\\), FS_HEADER\\)/title_text\\(translate\\(\"menu.select_level\", lang\\), FS_HEADER, font\\)/g' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/title_text\\(translate\\(\"settings.title\", lang\\), FS_HEADER\\)/title_text\\(translate\\(\"settings.title\", lang\\), FS_HEADER, font\\)/g' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/body_text\\(translate\\(\"menu.subtitle\", lang\\)\\)/body_text\\(translate\\(\"menu.subtitle\", lang\\), font\\)/g' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/setting_vol\\(translate\\(\"settings.music_vol\", lang\\), &format!\\(\"{}%\", vol_m\\), MenuAction::VolMusicDown, MenuAction::VolMusicUp\\)/setting_vol\\(translate\\(\"settings.music_vol\", lang\\), \\\\&format!\\(\"{}%\", vol_m\\), MenuAction::VolMusicDown, MenuAction::VolMusicUp, font\\)/' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/setting_vol\\(translate\\(\"settings.sfx_vol\", lang\\), &format!\\(\"{}%\", vol_s\\), MenuAction::VolSfxDown, MenuAction::VolSfxUp\\)/setting_vol\\(translate\\(\"settings.sfx_vol\", lang\\), \\\\&format!\\(\"{}%\", vol_s\\), MenuAction::VolSfxDown, MenuAction::VolSfxUp, font\\)/' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/setting_toggle\\(translate\\(\"settings.camera_mode\", lang\\), cam, MenuAction::CycleCameraMode\\)/setting_toggle\\(translate\\(\"settings.camera_mode\", lang\\), cam, MenuAction::CycleCameraMode, font\\)/' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/setting_toggle\\(\"Language\", s.language.as_str\\(\\), MenuAction::ToggleLang\\)/setting_toggle\\(\"Language\", s.language.as_str\\(\\), MenuAction::ToggleLang, font\\)/' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/setting_toggle\\(translate\\(\"settings.colorblind\", lang\\), cb, MenuAction::ToggleColorblind\\)/setting_toggle\\(translate\\(\"settings.colorblind\", lang\\), cb, MenuAction::ToggleColorblind, font\\)/' sokoban-game/src/menu.rs)",
+      "Bash(sed -i 's/pub fn setup_hud\\(commands: \\\\&mut Commands\\) {/pub fn setup_hud\\(commands: \\\\&mut Commands, fonts: Option<Res<FontAssets>>\\) {/' sokoban-game/src/hud.rs)",
+      "Bash(sed -i 's/pub fn update_hud\\(/pub fn update_hud\\(\\\\n    fonts: Option<Res<FontAssets>>,/' sokoban-game/src/hud.rs)",
+      "Bash(sed -i 's/pub fn setup_pause\\(/pub fn setup_pause\\(\\\\n    fonts: Option<Res<FontAssets>>,/' sokoban-game/src/hud.rs)",
+      "Bash(sed -i 's/pub fn update_tutorial_overlay\\(/pub fn update_tutorial_overlay\\(\\\\n    fonts: Option<Res<FontAssets>>,/' sokoban-game/src/hud.rs)",
+      "Bash(sed -i 's/pub fn update_dungeon_items\\(/pub fn update_dungeon_items\\(\\\\n    fonts: Option<Res<FontAssets>>,/' sokoban-game/src/hud.rs)"
+    ]
+  }
+}

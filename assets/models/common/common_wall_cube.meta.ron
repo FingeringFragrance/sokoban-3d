@@ -1,0 +1,11 @@
+(
+    model_path: "common_wall_cube.glb",
+    display_name: "Cube",
+    display_name_key: "obj.common.cube",
+    category: "wall",
+    object_type: "None",
+    scene_theme: "common",
+    model_height: 2.0,
+    is_pushable: false,
+    animations: [],
+)

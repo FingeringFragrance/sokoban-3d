@@ -1,0 +1,12 @@
+[package]
+name = "sokoban-game"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = "0.18.1"
+sokoban-core = { path = "../sokoban-core" }
+serde = { version = "1", features = ["derive"] }
+ron = "0.8"
+rand = "0.8"
+dirs = "6"
