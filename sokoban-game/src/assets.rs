@@ -29,6 +29,7 @@ fn default_scene_name() -> String {
 
 #[derive(Debug, Clone)]
 pub struct CatalogEntry {
+    #[allow(dead_code)]
     pub meta: AssetMeta,
     pub scene_handle: Handle<Scene>,
 }
@@ -55,6 +56,7 @@ impl AssetCatalog {
         None
     }
 
+    #[allow(dead_code)]
     pub fn has_models(&self) -> bool {
         !self.entries.is_empty()
     }

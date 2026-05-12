@@ -8,6 +8,7 @@ pub struct SceneEnvironment {
     pub ambient_color: Color,
     pub directional_illuminance: f32,
     pub directional_color: Color,
+    #[allow(dead_code)]
     pub fog_color: Color,
     pub fog_density: f32,
     pub particle_color: Color,

@@ -196,6 +196,7 @@ pub fn scan_level_items(grid: &Grid) -> HashSet<String> {
     items
 }
 
+#[allow(dead_code)]
 pub fn setup_tutorials(
     tutorial_state: &mut TutorialState,
     progress: &ProgressData,

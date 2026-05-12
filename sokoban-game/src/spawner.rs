@@ -57,6 +57,7 @@ fn try_spawn_scene_ex(
     true
 }
 
+#[allow(dead_code)]
 pub fn spawn_level_from_file(
     commands: &mut Commands,
     meshes: &mut ResMut<Assets<Mesh>>,
@@ -99,6 +100,7 @@ pub fn spawn_grid(
     state
 }
 
+#[allow(dead_code)]
 pub fn spawn_from_gridstate(
     commands: &mut Commands,
     meshes: &mut ResMut<Assets<Mesh>>,

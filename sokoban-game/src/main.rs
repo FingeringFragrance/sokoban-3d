@@ -134,8 +134,9 @@ fn main() {
         .add_systems(Startup, (setup, load_audio, load_bgm, load_asset_catalog, load_fonts))
         .add_systems(OnEnter(AppState::Menu), init_menu)
         .add_systems(OnEnter(AppState::Loading), reset_shake)
-        .add_systems(OnEnter(AppState::Paused), setup_pause)
+        .add_systems(OnEnter(AppState::Paused), (setup_pause, save::save_mid_level))
         .add_systems(OnExit(AppState::Paused), teardown_pause)
+        .add_systems(OnEnter(AppState::LevelComplete), save::save_mid_level)
         .add_systems(OnExit(AppState::Settings), save_settings_on_exit)
         .add_systems(
             Update,
@@ -232,8 +233,8 @@ pub fn scan_custom_levels() -> Vec<String> {
 }
 
 fn reset_shake(
-    mut shake_state: Option<ResMut<ShakeState>>,
-    mut particle_spawned: Option<ResMut<AmbientParticleSpawned>>,
+    shake_state: Option<ResMut<ShakeState>>,
+    particle_spawned: Option<ResMut<AmbientParticleSpawned>>,
 ) {
     if let Some(mut s) = shake_state {
         s.timer = 0.0;
@@ -334,7 +335,7 @@ fn level_switch(
             target_floor = Some(2);
         }
 
-        if target_floor.is_none() {
+        if target_floor.is_none() && keyboard.just_pressed(KeyCode::Enter) {
             if let Some(ref level) = multi_floor.level {
                 let player_pos = game_state.grid.player_pos.pos;
                 let current = multi_floor.current_floor;

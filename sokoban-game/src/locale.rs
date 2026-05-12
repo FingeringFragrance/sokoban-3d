@@ -16,6 +16,7 @@ impl Locale {
         Self { lang: lang.to_string() }
     }
 
+    #[allow(dead_code)]
     pub fn set_lang(&mut self, lang: &str) {
         self.lang = lang.to_string();
     }

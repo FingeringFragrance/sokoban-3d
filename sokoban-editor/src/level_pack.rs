@@ -144,10 +144,9 @@ pub fn pack_commands(
     mut pack: ResMut<LevelPack>,
     mut grid: ResMut<GridData>,
     mut meta: ResMut<LevelMeta>,
-    current: Res<CurrentLevel>,
+    mut current: ResMut<CurrentLevel>,
     mut save_path: ResMut<SavePath>,
     mut toast: ResMut<SaveToast>,
-    mut commands: Commands,
     mut dirty: ResMut<DirtyFlag>,
 ) {
     if playtest.active { return; }
@@ -166,9 +165,9 @@ pub fn pack_commands(
         save_pack(&pack, &save_path);
         if let Some((loaded, path)) = load_pack() {
             save_path.0 = Some(path);
-            commands.insert_resource(loaded.clone());
-            commands.insert_resource(CurrentLevel(0));
-            load_entry_into_grid(&loaded.levels[0], &mut grid, &mut meta);
+            *pack = loaded;
+            current.0 = 0;
+            load_entry_into_grid(&pack.levels[0], &mut grid, &mut meta);
             dirty.0 = false;
             toast.message = "关卡包已加载".into();
             toast.timer = 1.5;
@@ -177,8 +176,8 @@ pub fn pack_commands(
     if ctrl && shift && keyboard.just_pressed(KeyCode::KeyN) {
         save_current_to_pack(&mut pack, &grid, &meta, current.0);
         save_pack(&pack, &save_path);
-        commands.insert_resource(LevelPack::default());
-        commands.insert_resource(CurrentLevel(0));
+        *pack = LevelPack::default();
+        current.0 = 0;
         *grid = GridData::default();
         *meta = LevelMeta::default();
         save_path.0 = None;

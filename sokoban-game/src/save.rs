@@ -1,4 +1,4 @@
-use bevy::prelude::Resource;
+use bevy::prelude::{Res, Resource};
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 use std::fs;
@@ -212,17 +212,19 @@ impl GameStats {
 //  便捷统一的加载/保存
 // ============================================================
 
+#[allow(dead_code)]
 pub fn load_all() -> (ProgressData, SettingsData, GameStats) {
     (ProgressData::load_or_default(), SettingsData::load_or_default(), GameStats::load_or_default())
 }
 
+#[allow(dead_code)]
 pub fn save_all(progress: &ProgressData, settings: &SettingsData, stats: &GameStats) {
     progress.save();
     settings.save();
     stats.save_to_file();
 }
 
-// 向后兼容
+#[allow(dead_code)]
 pub fn load_progress() -> ProgressData {
     ProgressData::load_or_default()
 }
@@ -295,5 +297,33 @@ impl MidLevelSave {
     pub fn delete() {
         let path = save_dir().join("mid_level_save.ron");
         let _ = fs::remove_file(&path);
+    }
+}
+
+pub fn save_mid_level(game_state: Option<Res<crate::game::GameState>>) {
+    if let Some(gs) = game_state {
+        if !gs.level_complete {
+            let save = MidLevelSave {
+                current_level_index: gs.current_level_index,
+                level_paths: gs.level_paths.clone(),
+                grid_snapshot: gs.grid.snapshot(),
+                initial_snapshot: gs.initial_snapshot.clone(),
+                history: gs.history.clone(),
+                replay: gs.replay.clone(),
+                is_daily: gs.is_daily,
+                daily_seed: gs.daily_seed,
+                is_dungeon_mode: gs.is_dungeon_mode,
+                is_multifloor: gs.is_multifloor,
+                current_floor: gs.current_floor,
+                floor_count: gs.floor_count,
+                scene_theme: gs.scene_theme.clone(),
+                level_name: gs.level_name.clone(),
+                par_steps: gs.par_steps,
+                dungeon_current: gs.dungeon_current,
+                dungeon_total: gs.dungeon_total,
+                dungeon_room_name: gs.dungeon_room_name.clone(),
+            };
+            save.save();
+        }
     }
 }

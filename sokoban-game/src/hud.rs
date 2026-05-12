@@ -508,7 +508,7 @@ pub fn update_hud(
 
 /// System: update tutorial overlay visibility and content
 pub fn update_tutorial_overlay(
-    fonts: Option<Res<FontAssets>>,
+    _fonts: Option<Res<FontAssets>>,
     tutorial_state: Res<TutorialState>,
     locale: Option<Res<Locale>>,
     mut overlay_query: Query<&mut Visibility, With<TutorialOverlay>>,
@@ -1037,8 +1037,8 @@ pub fn pause_button_interaction(
     mut settings: Option<ResMut<crate::save::SettingsData>>,
     mut locale: ResMut<Locale>,
     game_state: Option<Res<GameState>>,
-    dungeon_manager: Option<Res<DungeonManager>>,
-    multi_floor: Option<Res<MultiFloorRun>>,
+    _dungeon_manager: Option<Res<DungeonManager>>,
+    _multi_floor: Option<Res<MultiFloorRun>>,
     mut volume_text_query: Query<
         &mut Text,
         (

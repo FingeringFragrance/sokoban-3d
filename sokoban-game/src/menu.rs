@@ -52,11 +52,14 @@ const ACCENT_GREEN: Color = Color::srgb(0.15, 0.62, 0.35);
 const ACCENT_PURPLE: Color = Color::srgb(0.45, 0.30, 0.60);
 const ACCENT_BLUE: Color = Color::srgb(0.20, 0.45, 0.65);
 const ACCENT_GOLD: Color = Color::srgb(0.95, 0.72, 0.15);
+#[allow(dead_code)]
 const ACCENT_RED: Color = Color::srgb(0.75, 0.22, 0.25);
+#[allow(dead_code)]
 const ACCENT_CYAN: Color = Color::srgb(0.15, 0.55, 0.55);
 const ACCENT_ORANGE: Color = Color::srgb(0.85, 0.50, 0.15);
 const BTN_DEFAULT: Color = Color::srgb(0.15, 0.15, 0.22);
 const BTN_HOVER: Color = Color::srgb(0.25, 0.25, 0.35);
+#[allow(dead_code)]
 const BTN_SELECTED: Color = Color::srgb(0.12, 0.45, 0.22);
 const TEXT_PRIMARY: Color = Color::srgb(0.95, 0.95, 0.95);
 const TEXT_SECONDARY: Color = Color::srgba(0.9, 0.9, 0.9, 0.55);

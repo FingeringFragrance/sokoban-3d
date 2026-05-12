@@ -234,7 +234,7 @@ impl SolverNode {
             .filter(|(_, bt)| *bt != ObjectType::HeavyBox)
             .collect();
         if solvable.is_empty() {
-            return false;
+            return true;
         }
         solvable.iter().all(|(pos, _)| targets.contains(pos))
     }

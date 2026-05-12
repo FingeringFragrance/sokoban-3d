@@ -184,8 +184,8 @@ fn load_multifloor(
     materials: &mut ResMut<Assets<StandardMaterial>>,
     game_state: &mut GameState,
     multi_floor: &MultiFloorRun,
-    progress: &ProgressData,
-    tutorial_state: &mut TutorialState,
+    _progress: &ProgressData,
+    _tutorial_state: &mut TutorialState,
     catalog: Option<&AssetCatalog>,
     _next_state: &mut NextState<AppState>,
 ) -> Option<GridState> {
@@ -206,8 +206,8 @@ fn load_dungeon(
     materials: &mut ResMut<Assets<StandardMaterial>>,
     game_state: &mut GameState,
     dungeon_manager: &DungeonManager,
-    progress: &ProgressData,
-    tutorial_state: &mut TutorialState,
+    _progress: &ProgressData,
+    _tutorial_state: &mut TutorialState,
     catalog: Option<&AssetCatalog>,
     _next_state: &mut NextState<AppState>,
 ) -> Option<GridState> {
@@ -227,7 +227,7 @@ fn load_daily(
     meshes: &mut ResMut<Assets<Mesh>>,
     materials: &mut ResMut<Assets<StandardMaterial>>,
     game_state: &mut GameState,
-    progress: &ProgressData,
+    _progress: &ProgressData,
     tutorial_state: &mut TutorialState,
     catalog: Option<&AssetCatalog>,
     _next_state: &mut NextState<AppState>,
@@ -249,7 +249,7 @@ fn load_daily(
 
     let grid = result.grid;
     let par = result.optimal_steps;
-    let grid_clone = grid.clone();
+    let _grid_clone = grid.clone();
     let grid_state = spawn_grid(commands, meshes, materials, &grid, catalog, "default");
 
     game_state.par_steps = par;

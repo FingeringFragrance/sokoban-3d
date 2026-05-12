@@ -171,6 +171,7 @@ pub fn editor_commands(
         }
     }
     if ctrl && keyboard.just_pressed(KeyCode::KeyN) {
+        crate::level_pack::save_current_to_pack(&mut pack, &grid, &meta, current.0);
         undo.push(&grid.cells);
         *grid = GridData::default();
         *meta = crate::level_meta::LevelMeta::default();

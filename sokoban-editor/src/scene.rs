@@ -162,6 +162,11 @@ pub fn adjust_decoration_materials(
     mut processed: Local<Vec<Entity>>,
     mut logged: Local<bool>,
 ) {
+    if decorations.is_empty() {
+        processed.clear();
+        return;
+    }
+
     for deco_children in &decorations {
         for child in deco_children.iter() {
             if processed.contains(&child) {

@@ -212,6 +212,8 @@ pub fn player_input(
                 );
                 game_state.hint_direction = None;
                 game_state.deadlock_detected = false;
+                session.last_step_count = 0;
+                session.moves_this_session = 0;
                 shake_state.timer = shake_state.duration;
                 return;
             }
