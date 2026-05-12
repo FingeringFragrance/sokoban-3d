@@ -1,0 +1,26 @@
+(
+    meta: (
+        id: 10,
+        name: "Grand Hall",
+        author: "Designer",
+        difficulty: 5,
+        par_steps: Some(50),
+        tags: ["expert"],
+        description: "The ultimate challenge",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "#############",
+        "#...........#",
+        "#.@...$.....#",
+        "#....##.....#",
+        "#.k..D......#",
+        "#....#...$..#",
+        "#....#......#",
+        "#..H........#",
+        "#...........#",
+        "#..x..x..x..#",
+        "#...........#",
+        "#############",
+    ]),
+)

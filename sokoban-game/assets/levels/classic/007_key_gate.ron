@@ -1,0 +1,24 @@
+(
+    meta: (
+        id: 7,
+        name: "Key & Gate",
+        author: "Designer",
+        difficulty: 3,
+        par_steps: Some(30),
+        tags: ["medium", "key"],
+        description: "Collect the key to open the gate",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "###########",
+        "#.........#",
+        "#.k.@.$...#",
+        "#...##....#",
+        "#...D.....#",
+        "#...#..$..#",
+        "#.........#",
+        "#..x...x..#",
+        "#.........#",
+        "###########",
+    ]),
+)

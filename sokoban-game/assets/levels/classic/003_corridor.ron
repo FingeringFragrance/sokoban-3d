@@ -1,0 +1,24 @@
+(
+    meta: (
+        id: 3,
+        name: "Corridor",
+        author: "Designer",
+        difficulty: 2,
+        par_steps: Some(20),
+        tags: ["medium"],
+        description: "Navigate the corridor",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "##########",
+        "#........#",
+        "#.@$$..#.#",
+        "#........#",
+        "#.##.....#",
+        "#....$...#",
+        "#.#.##...#",
+        "#..x.x.x.#",
+        "#........#",
+        "##########",
+    ]),
+)

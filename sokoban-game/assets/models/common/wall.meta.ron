@@ -1,0 +1,11 @@
+(
+    model_path: "wall.glb",
+    display_name: "Stone Wall",
+    display_name_key: "obj.common.wall",
+    category: "wall",
+    object_type: "Wall",
+    scene_theme: "common",
+    model_height: 3.0,
+    is_pushable: false,
+    animations: [],
+)

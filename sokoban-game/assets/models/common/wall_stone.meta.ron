@@ -1,0 +1,11 @@
+(
+    model_path: "wall_stone.glb",
+    display_name: "Mossy Wall",
+    display_name_key: "obj.forest.wall_stone",
+    category: "wall",
+    object_type: "Wall",
+    scene_theme: "forest",
+    model_height: 3.0,
+    is_pushable: false,
+    animations: [],
+)

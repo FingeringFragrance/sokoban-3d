@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "sokoban-core",
+    "sokoban-game",
+    "sokoban-cli",
+    "sokoban-editor",
+]

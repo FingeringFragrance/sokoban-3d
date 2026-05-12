@@ -1,0 +1,24 @@
+(
+    meta: (
+        id: 6,
+        name: "Switches",
+        author: "Designer",
+        difficulty: 3,
+        par_steps: Some(25),
+        tags: ["medium", "switch"],
+        description: "Use switches to lower pillars",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "##########",
+        "#........#",
+        "#.@..$...#",
+        "#...##...#",
+        "#..$.....#",
+        "#........#",
+        "#........#",
+        "#..x.x.x.#",
+        "#........#",
+        "##########",
+    ]),
+)

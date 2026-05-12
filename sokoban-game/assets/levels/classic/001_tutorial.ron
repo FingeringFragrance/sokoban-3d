@@ -1,0 +1,21 @@
+(
+    meta: (
+        id: 1,
+        name: "Tutorial",
+        author: "Designer",
+        difficulty: 1,
+        par_steps: Some(6),
+        tags: ["tutorial"],
+        description: "Push the box onto the target",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "#######",
+        "#.....#",
+        "#.....#",
+        "#.@$..#",
+        "#.....#",
+        "#..x..#",
+        "#######",
+    ]),
+)

@@ -1,0 +1,26 @@
+(
+    meta: (
+        id: 5,
+        name: "Warehouse",
+        author: "Designer",
+        difficulty: 3,
+        par_steps: Some(40),
+        tags: ["hard"],
+        description: "Organize the warehouse",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "#############",
+        "#...........#",
+        "#.@..$..$...#",
+        "#....#......#",
+        "#.##.#.##...#",
+        "#....#......#",
+        "#.##...###..#",
+        "#......#..$.#",
+        "#..##.##.###",
+        "#.....x..x.x",
+        "#...........#",
+        "#############",
+    ]),
+)

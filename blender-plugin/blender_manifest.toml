@@ -1,0 +1,13 @@
+schema_version = "1.0.0"
+
+id = "sokoban_3d_tools"
+version = "1.0.0"
+name = "Sokoban 3D Tools"
+tagline = "Export models and metadata for Sokoban 3D game"
+maintainer = "Sokoban3D <dev@example.com>"
+type = "add-on"
+
+blender_version_min = "5.1.0"
+
+[permissions]
+files = "Export models and meta.ron files to disk"

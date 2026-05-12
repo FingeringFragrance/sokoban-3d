@@ -1,0 +1,24 @@
+(
+    meta: (
+        id: 8,
+        name: "Heavy Lifting",
+        author: "Designer",
+        difficulty: 4,
+        par_steps: Some(35),
+        tags: ["hard", "heavy"],
+        description: "Heavy boxes block the path",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "###########",
+        "#.........#",
+        "#.@..$....#",
+        "#...##....#",
+        "#.H.......#",
+        "#...#..$..#",
+        "#.........#",
+        "#..x...x..#",
+        "#.........#",
+        "###########",
+    ]),
+)

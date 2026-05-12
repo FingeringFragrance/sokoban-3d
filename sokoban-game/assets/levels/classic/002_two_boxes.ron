@@ -1,0 +1,22 @@
+(
+    meta: (
+        id: 2,
+        name: "Two Boxes",
+        author: "Designer",
+        difficulty: 2,
+        par_steps: Some(15),
+        tags: ["easy"],
+        description: "Push both boxes onto targets",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "########",
+        "#......#",
+        "#.@.$..#",
+        "#..#...#",
+        "#....$.#",
+        "#......#",
+        "#.x..x.#",
+        "########",
+    ]),
+)

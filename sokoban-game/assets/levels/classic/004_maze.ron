@@ -1,0 +1,26 @@
+(
+    meta: (
+        id: 4,
+        name: "Maze",
+        author: "Designer",
+        difficulty: 3,
+        par_steps: Some(30),
+        tags: ["medium", "maze"],
+        description: "Find your way through the maze",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "############",
+        "#..........#",
+        "#.##.###...#",
+        "#..#.....#.#",
+        "#.##.#.#.#.#",
+        "#.$..#.$...#",
+        "###.##.###.#",
+        "#.....#..x.#",
+        "#.#.#......#",
+        "#.@..#..x..#",
+        "#..........#",
+        "############",
+    ]),
+)

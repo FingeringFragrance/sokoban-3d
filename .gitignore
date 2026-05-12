@@ -1,0 +1,31 @@
+/target
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.pdb
+
+# Assets (managed separately)
+*.glb
+*.gltf
+*.blend
+*.ogg
+*.wav
+*.mp3
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.ico
+*.ttf
+*.otf
+*.woff

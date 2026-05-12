@@ -1,0 +1,24 @@
+(
+    meta: (
+        id: 9,
+        name: "Frozen Path",
+        author: "Designer",
+        difficulty: 4,
+        par_steps: Some(20),
+        tags: ["hard", "ice"],
+        description: "Beware the slippery ice",
+    ),
+    scene_theme: "default",
+    ascii: Some([
+        "##########",
+        "#........#",
+        "#.@..$...#",
+        "#...~~...#",
+        "#...~~...#",
+        "#........#",
+        "#........#",
+        "#...x.x..#",
+        "#........#",
+        "##########",
+    ]),
+)

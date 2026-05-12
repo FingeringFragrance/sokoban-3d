@@ -1,0 +1,22 @@
+(
+    completed: [],
+    stars: {},
+    seen_tutorials: [],
+    language: "en",
+    colorblind_mode: false,
+    high_contrast: false,
+    unlocked_achievements: [],
+    stats: (
+        total_moves: 0,
+        total_pushes: 0,
+        total_undos: 0,
+        total_hints: 0,
+        levels_completed: 0,
+        keys_collected: 0,
+        boxes_destroyed: 0,
+        portals_used: 0,
+        total_play_time_secs: 0.0,
+        daily_completed: 0,
+        dungeon_rooms_cleared: 0,
+    ),
+)

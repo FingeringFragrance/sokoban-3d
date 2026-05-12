@@ -1,0 +1,11 @@
+(
+    model_path: "player.glb",
+    display_name: "Player",
+    display_name_key: "obj.common.player",
+    category: "player",
+    object_type: "Player",
+    scene_theme: "common",
+    model_height: 1.8,
+    is_pushable: false,
+    animations: ["walk", "push", "idle"],
+)

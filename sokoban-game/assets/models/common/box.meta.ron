@@ -1,0 +1,11 @@
+(
+    model_path: "box.glb",
+    display_name: "Wooden Box",
+    display_name_key: "obj.common.box",
+    category: "box",
+    object_type: "Box",
+    scene_theme: "common",
+    model_height: 1.5,
+    is_pushable: true,
+    animations: ["push", "bounce_on_target"],
+)
